@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arithmetic operations</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <script language="javascript" type="text/javascript">  
+      function multiplication(){  
+      
+        var elem = document.getElementById("calcform");
+        document.getElementById("operation").value = "mult";
+        elem.submit();
+      }  
+      </script>  
+        
+      <script language="javascript" type="text/javascript">  
+      function addition(){  
+        
+        var elem = document.getElementById("calcform");
+        document.getElementById("operation").value = "add";
+        elem.submit();
+      }  
+      </script>  
+        
+      <script language="javascript" type="text/javascript">  
+      function subtraction(){  
+      
+      var elem = document.getElementById("calcform");
+        document.getElementById("operation").value = "sub";
+        elem.submit();
+      }  
+      </script>  
+        
+      <script language="javascript" type="text/javascript">  
+      function division(){  
+      
+        var elem = document.getElementById("calcform");
+        document.getElementById("operation").value = "div";
+        elem.submit();
+      }  
+      </script>
+    
+          
+        
+      <script language="javascript" type="text/javascript">  
+      function modulus(){  
+        
+        var elem = document.getElementById("calcform");
+        document.getElementById("operation").value = "mod";
+        elem.submit();
+      }  
+      </script>  
+  </head>
+  <body>
+    <div class="container">
+      <form id="calcform" action="/" name="calculator" type="integer" style="display: flex; width: 16rem; margin-left: auto;margin-right: auto; flex-direction: column;" method="POST">
+        <label class="label" for="number1">ENTER THE FIRST NUMBER:</label>
+        <input type="number" name="a" id="number1"/><br /><br />
+        <label for="number2">ENTER THE SECOND NUMBER:</label>
+        <input type="number" name="b" id="number2" /> <br /><br />
+        <label for="total"> RESULT:</label>
+        <input type="number" id="total" name="total" value="{{ans}}"/> 
+        <input type="text" id="operation" name="op" style="display: none">
+        <br><br>
+        <label>SELECT OPERATION:</label>
+        <br>
+        <input type="button" value="+" onclick="addition()" >
+        <input type="button" value="-" onclick="subtraction()" >
+        <input type="button" value="*" onclick="multiplication()" >
+        <input type="button" value="/" onclick="division()" >
+        <input type="button" value="%" onclick="modulus()" >
+        <br ><br >
+      </form>
+    </div>
+  </body>
+</html>
